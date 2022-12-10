@@ -437,13 +437,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('🎉 𝗔𝗱𝗱 𝗠𝗲 𝗧𝗼 𝗬𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽𝘀 🎉', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TechMagazineYT')
+            InlineKeyboardButton('🧞‍♂️ ᴏᴡɴᴇʀ', url='https:/ddrabit/19'),
+            InlineKeyboardButton('🎭 ɢʀᴏᴜᴘ', url='https://t.me/TechMagazineYT')
         ], [
-            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('🛠️ ʜᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('🛡️ ᴀʙᴏᴜᴛ', callback_data='about')
+        ], [
+            InlineKeyboardButton('❕Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ Mᴏᴠɪᴇs❕', callback_data='how')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -451,7 +453,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-        await query.answer('Piracy Is Crime')
+        await query.answer('')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('ᴀᴜᴛᴏ', callback_data='autofilter'),
@@ -462,7 +464,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ᴄᴏɴɴᴇᴄᴛɪᴏɴ', callback_data='coct'),
             InlineKeyboardButton('ᴇxᴛʀᴀ', callback_data='extra')
         ], [
-            InlineKeyboardButton('ɪᴍᴅʙ', callback_data='imdbx'
+            InlineKeyboardButton('ɪᴍᴅʙ', callback_data='imdbx'),
             InlineKeyboardButton('ɪɴʟɪɴᴇ', callback_data='inlinex'),
             InlineKeyboardButton('ᴜʀʟ sʜᴏʀᴛ', callback_data='urlshort')
         ], [
