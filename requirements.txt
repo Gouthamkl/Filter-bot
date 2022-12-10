@@ -15,4 +15,4 @@ youtube_search
 youtube-dl
 wget
 yt-dlp
-youtubesearchpython
+youtube-search-python==1.4.6
