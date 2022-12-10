@@ -96,7 +96,7 @@ Search IMDB results and customize IMDB Template. You can customize them as per y
 1. Make me the admin of your channel if it's private.
 2. make sure that your channel does not contains camrips, porn and fake files.
 3. Forward the last message to me with quotes.
- I'll add all the files in that channel to my db.
+ I'll add all the files in that channel to my db."""
     PASTE_TXT = """<b>Commands and Usage.</b>
 
 /paste [text] - paste the given text on Pasty
@@ -146,7 +146,7 @@ Group Support."""
 
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
-    AUTOFILTER_TXT = """<b>Commands and Usage.</b>
+    AUT_TXT = """<b>Commands and Usage.</b>
 
 /autofilter on - Enable auto filter.
 /autofilter off - Disable auto filter.
