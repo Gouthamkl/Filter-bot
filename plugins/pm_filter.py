@@ -451,7 +451,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-        await query.answer('Piracy is Crime')
+        await query.answer('')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('ᴀᴜᴛᴏ', callback_data='autofilter'),
@@ -466,7 +466,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ɪɴʟɪɴᴇ', callback_data='inlinex'),
             InlineKeyboardButton('ᴜʀʟ sʜᴏʀᴛ', callback_data='urlshort')
         ], [
-            InlineKeyboardButton('« Back', callback_data='backx')
+            InlineKeyboardButton('« Back', callback_data='back')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -487,6 +487,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "imdbx":
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.IMDB_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "back":
+        buttons = [[
+            InlineKeyboardButton('ok', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
