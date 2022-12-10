@@ -8,7 +8,7 @@ from Script import script
 import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
-from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, AUTH_GROUPS, P_TTI_SHOW_OFF, IMDB, \
+from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, AUTH_GROUPS, P_TTI_SHOW_OFF, IMDB, G_FILTER, \
     SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters, enums
@@ -33,13 +33,31 @@ logger.setLevel(logging.ERROR)
 
 BUTTONS = {}
 SPELL_CHECK = {}
-
+FILTER_MODE = {}
+G_MODE = {}
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
-    k = await manual_filters(client, message)
-    if k == False:
-        await auto_filter(client, message)
+    if G_FILTER:
+        if G_MODE.get(str(message.chat.id)) == "False":
+            return 
+        else:
+            kd = await global_filters(client, message)
+        if kd == False:          
+            k = await manual_filters(client, message)
+            if k == False:
+                if FILTER_MODE.get(str(message.chat.id)) == "False":
+                    return
+                else:
+                    await auto_filter(client, message)   
+    else:
+        k = await manual_filters(client, message)
+        if k == False:
+            if FILTER_MODE.get(str(message.chat.id)) == "False":
+                return
+            else:
+                await auto_filter(client, message)   
+
 
 
 @Client.on_callback_query(filters.regex(r"^next"))
@@ -837,6 +855,75 @@ async def manual_filters(client, message, text=False):
                             reply_markup=InlineKeyboardMarkup(button),
                             reply_to_message_id=reply_id
                         )
+                except Exception as e:
+                    logger.exception(e)
+                break
+    else:
+        return False
+
+async def global_filters(client, message, text=False):
+    group_id = message.chat.id
+    name = text or message.text
+    reply_id = message.reply_to_message.id if message.reply_to_message else message.id
+    keywords = await get_gfilters('gfilters')
+    for keyword in reversed(sorted(keywords, key=len)):
+        pattern = r"( |^|[^\w])" + re.escape(keyword) + r"( |$|[^\w])"
+        if re.search(pattern, name, flags=re.IGNORECASE):
+            reply_text, btn, alert, fileid = await find_gfilter('gfilters', keyword)
+
+            if reply_text:
+                reply_text = reply_text.replace("\\n", "\n").replace("\\t", "\t")
+
+            if btn is not None:
+                try:
+                    if fileid == "None":
+                        if btn == "[]":
+                            knd3 = await client.send_message(
+                                group_id, 
+                                reply_text, 
+                                disable_web_page_preview=True,
+                                reply_to_message_id=reply_id
+                            )
+                            await asyncio.sleep(IMDB_DELET_TIME)
+                            await knd3.delete()
+                            await message.delete()
+
+                        else:
+                            button = eval(btn)
+                            knd2 = await client.send_message(
+                                group_id,
+                                reply_text,
+                                disable_web_page_preview=True,
+                                reply_markup=InlineKeyboardMarkup(button),
+                                reply_to_message_id=reply_id
+                            )
+                            await asyncio.sleep(IMDB_DELET_TIME)
+                            await knd2.delete()
+                            await message.delete()
+
+                    elif btn == "[]":
+                        knd1 = await client.send_cached_media(
+                            group_id,
+                            fileid,
+                            caption=reply_text or "",
+                            reply_to_message_id=reply_id
+                        )
+                        await asyncio.sleep(IMDB_DELET_TIME)
+                        await knd1.delete()
+                        await message.delete()
+
+                    else:
+                        button = eval(btn)
+                        knd = await message.reply_cached_media(
+                            fileid,
+                            caption=reply_text or "",
+                            reply_markup=InlineKeyboardMarkup(button),
+                            reply_to_message_id=reply_id
+                        )
+                        await asyncio.sleep(IMDB_DELET_TIME)
+                        await knd.delete()
+                        await message.delete()
+
                 except Exception as e:
                     logger.exception(e)
                 break
