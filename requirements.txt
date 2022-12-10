@@ -9,3 +9,9 @@ bs4
 pyshorteners
 imdbpy==2021.4.18
 aiohttp
+aiofiles
+requests
+youtube_search
+youtube-dl
+wget
+yt-dlp
