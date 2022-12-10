@@ -434,7 +434,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             protect_content=True if ident == 'checksubp' else False
         )
     elif query.data == "pages":
-        await query.answer('@')
+        await query.answer()
     elif query.data == "start":                        
         buttons = [[
             InlineKeyboardButton("🎉 𝗔𝗱𝗱 𝗠𝗲 𝗧𝗼 𝗬𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽𝘀 🎉", url=f"http://t.me/{temp.U_NAME}?startgroup=start")
@@ -467,7 +467,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ɪɴʟɪɴᴇ', callback_data='inlinex'),
             InlineKeyboardButton('ᴜʀʟ sʜᴏʀᴛ', callback_data='urlshort')
         ], [
-            InlineKeyboardButton('« Back', callback_data='start')
+            InlineKeyboardButton('« Back', callback_data='backx')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -475,17 +475,24 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "backx":
     elif query.data == "about":
         buttons = [[
             InlineKeyboardButton('📉 Status', url='https://t.me/TechMagazineYT'),
             InlineKeyboardButton('🕊️ Source', url='t.me/tg://settings')
         ], [
-            InlineKeyboardButton('« Back', callback_data='start'),
+            InlineKeyboardButton('« Back', callback_data='backx'),
             InlineKeyboardButton('', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.ABOUT_TXT.format(temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.START_TXT.format(temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
