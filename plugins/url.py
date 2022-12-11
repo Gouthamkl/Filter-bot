@@ -66,7 +66,7 @@ async def short(link):
     try:
         s = Shortener()
         url = s.chilpit.short(link)
-        shorten_urls += f"\n\n**𝖢𝗁𝗂𝗅𝗉.𝖨𝗍-**\n{url}"
+        shorten_urls += f"\n\n**𝖢𝗁𝗂𝗅𝗉.𝖨𝗍 -**\n{url}"
     except Exception as error:
         print(f"Chilp.it error :- {error}")
     
@@ -99,7 +99,7 @@ async def short(link):
     try:
         s = Shortener()
         url = s.isgd.short(link)
-        shorten_urls += f"\n\n**𝖨𝗌.𝗀𝖽 -**{url}"
+        shorten_urls += f"\n\n**𝖨𝗌.𝗀𝖽 -**\n{url}"
     except Exception as error:
         print(f"Is.gd error :- {error}")
     
