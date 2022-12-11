@@ -5,13 +5,35 @@ class script(object):
 
 𝖢𝗅𝗂𝖼𝗄 𝗈𝗇 𝗍𝗁𝖾 𝖧𝖾𝗅𝗉 𝖻𝗎𝗍𝗍𝗈𝗇 𝖿𝗈𝗋 𝖬𝗈𝗋𝖾..."""
     HELP_TXT = """<b>Welcome To My Help Module</b>"""
-    ABOUT_TXT = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
-✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/LᴀL>ddrabit</a>
-✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
-✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
-✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱
-✯ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁: KOYEB
-✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: v1.0.1 [ 𝙱𝙴𝚃𝙰 ]"""
+    IMDB_TXT = """
+<b>IMDB</b>
+
+Search IMDB results and customize IMDB Template. You can customize them as per your needs.
+
+<b>Comands & Usage:</b>
+
+/imdb  - <code>get the film information from IMDb source.</code>
+/set_template - <code>To set Custom template for your group.</code>
+
+<a href=https://t.me/TeamEvamaria/9>Know More....</a>"""
+    ABOUT_TXT = """<b>◎ Nᴀᴍᴇ: Michael Jackson
+◎ Cʀᴇᴀᴛᴏʀ: <a href=https://t.me/ddrabit>LᴀL</a>
+◎ Lᴀɴɢᴜᴀɢᴇ: Pʏᴛʜᴏɴ 3
+◎ Dᴀᴛᴀ Bᴀsᴇ: Mᴏɴɢᴏ DB
+◎ Bᴏᴛ Sᴇʀᴠᴇʀ: Koyeb</b>"""
+BATCH_TXT = """ 
+<b>BATCH</b>
+
+You can use the filestore feature for any public channel without bot being admin in that channel (only media messages  can be stored). 
+
+</b>Commands & Usage:</b>
+
+1. For a single file use /link command as reply to file.(only video, audio and documents are supported for now.)
+
+2. For creating batch files , use /batch </code><starting message link> <ending message link>.</code>
+Example: </code/batch https://t.me/teamEvaMaria/2</code> </code>https://t.me/teamEvaMaria/9</code>
+
+"""
     SOURCE_TXT = """<b>NOTE:</b>
 - TechMagazine-AutoFilterBot is a open source project. 
 - Source - https://github.com/itsyogieu/TechMagazine-AutoFilterBot
