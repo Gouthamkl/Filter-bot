@@ -29,7 +29,7 @@ Search IMDB results and customize IMDB Template. You can customize them as per y
 ◎ Lᴀɴɢᴜᴀɢᴇ: Pʏᴛʜᴏɴ 3
 ◎ Dᴀᴛᴀ Bᴀsᴇ: Mᴏɴɢᴏ DB
 ◎ Bᴏᴛ Sᴇʀᴠᴇʀ: Koyeb</b>"""
-BATCH_TXT = """ 
+    BATCH_TXT = """ 
 <b>BATCH</b>
 
 You can use the filestore feature for any public channel without bot being admin in that channel (only media messages  can be stored). 
@@ -42,12 +42,6 @@ You can use the filestore feature for any public channel without bot being admin
 Example: </code/batch https://t.me/teamEvaMaria/2</code> </code>https://t.me/teamEvaMaria/9</code>
 
 """
-    SOURCE_TXT = """<b>NOTE:</b>
-- TechMagazine-AutoFilterBot is a open source project. 
-- Source - https://github.com/itsyogieu/TechMagazine-AutoFilterBot
-
-<b>DEVS:</b>
-- <a href=https://t.me/TechMagazineYT>TechMagazine</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and EvaMaria will respond whenever a keyword is found the message
@@ -123,11 +117,11 @@ This module only works for my admins
 • /unban  - <code>to unban a user.</code>
 • /channel - <code>to get list of total connected channels</code>
 • /broadcast - <code>to broadcast a message to all users</code>"""
-    STATUS_TXT = """★ 𝚃𝙾𝚃𝙰𝙻 𝙵𝙸𝙻𝙴𝚂: <code>{}</code>
-★ 𝚃𝙾𝚃𝙰𝙻 𝚄𝚂𝙴𝚁𝚂: <code>{}</code>
-★ 𝚃𝙾𝚃𝙰𝙻 𝙲𝙷𝙰𝚃𝚂: <code>{}</code>
-★ 𝚄𝚂𝙴𝙳 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: <code>{}</code> 𝙼𝚒𝙱
-★ 𝙵𝚁𝙴𝙴 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: <code>{}</code> 𝙼𝚒𝙱"""
+    STATUS_TXT = """○ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code>
+○ Tᴏᴛᴀʟ Usᴇʀs: <code>{}</code>
+○ Tᴏᴛᴀʟ Cʜᴀᴛs: <code>{}</code>
+○ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{}</code> 𝙼𝚒𝙱
+○ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{}</code> 𝙼𝚒𝙱"""
     LOG_TEXT_G = """#NewGroup
 Group = {}(<code>{}</code>)
 Total Members = <code>{}</code>
