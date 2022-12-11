@@ -437,13 +437,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('🧞‍♂️ ᴏᴡɴᴇʀ', url='https://t.me/ddrabit/19'),
-            InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ', callback_data='how')
+            InlineKeyboardButton('', url='https://t.me/ddrabit/19'),
+            InlineKeyboardButton('', callback_data='ok')
         ], [
             InlineKeyboardButton('🛠️ ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('🛡️ ᴀʙᴏᴜᴛ', callback_data='about')
         ], [
-            InlineKeyboardButton('🎉 𝗔𝗱𝗱 𝗠𝗲 𝗧𝗼 𝗬𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽𝘀 🎉', url=f'http://t.me/{temp.U_NAME}startgroup=start')
+            InlineKeyboardButton('🎉 𝗔𝗱𝗱 𝗠𝗲 𝗧𝗼 𝗬𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽𝘀 🎉', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -456,14 +456,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('ᴀᴜᴛᴏ', callback_data='autofilter'),
             InlineKeyboardButton('ᴍᴀɴᴜᴀʟ', callback_data='manuelfilter'),
-            InlineKeyboardButton('ʙᴀᴛᴄʜ', callback_data='filestore')
+            InlineKeyboardButton('ʙᴀᴛᴄʜ', callback_data='thefilestore')
         ], [
             InlineKeyboardButton('ᴀᴅᴍɪɴ', callback_data='admin'),
             InlineKeyboardButton('ᴄᴏɴɴᴇᴄᴛɪᴏɴ', callback_data='coct'),
             InlineKeyboardButton('ᴇxᴛʀᴀ', callback_data='extra')
         ], [
-            InlineKeyboardButton('ɪᴍᴅʙ', callback_data='imdbx'),
-            InlineKeyboardButton('ɪɴʟɪɴᴇ', callback_data='inlinex'),
+            InlineKeyboardButton('ɪᴍᴅʙ', callback_data='theimdb'),
+            InlineKeyboardButton('sᴛᴀᴛᴜs', callback_data='stats'),
             InlineKeyboardButton('ᴜʀʟ sʜᴏʀᴛ', callback_data='urlshort')
         ], [
             InlineKeyboardButton('« Back', callback_data='start')
@@ -484,7 +484,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif query.data == "imdbx":
+    elif query.data == "theimdb":
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='help')
         ]]
@@ -525,7 +525,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif query.data == "filestore":
+    elif query.data == "thefilestore":
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='manuelfilter')
         ]]
@@ -547,8 +547,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('« Back', callback_data='help'),
-            InlineKeyboardButton('📉 Status', callback_data='stats')
+            InlineKeyboardButton('« Back', callback_data='start'),
+            InlineKeyboardButton('Group', url='https://t.me/+4Gma2ZZFFRA2MWQ1')
+            InlineKeyboardButton('Owner', url='https://t.me/ddrabit/19')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
