@@ -11,6 +11,7 @@ class script(object):
 Use /short the leave a space and paste your link and send me as a message.
 
 Example: <code>/short http://t.me/cv_autofilter_bot</code>
+"""
     HELP_TXT = """<b>Welcome To My Help Module</b>"""
     IMDB_TXT = """
 <b>IMDB</b>
