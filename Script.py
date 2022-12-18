@@ -10,7 +10,7 @@ class script(object):
 
 Use /short the leave a space and paste your link and send me as a message.
 
-Example: <code>/short http://t.me/cv_autofilter_bot</code>
+Example: <code>/short http://t.me/wudixh</code>
 """
     HELP_TXT = """<b>Welcome To My Help Module</b>"""
     IMDB_TXT = """
@@ -24,8 +24,8 @@ Search IMDB results and customize IMDB Template. You can customize them as per y
 /set_template - <code>To set Custom template for your group.</code>
 
 <a href=https://t.me/TeamEvamaria/9>Know More....</a>"""
-    ABOUT_TXT = """<b>◎ Nᴀᴍᴇ: Michael Jackson
-◎ Cʀᴇᴀᴛᴏʀ: <a href=https://t.me/ddrabit>LᴀL</a>
+    ABOUT_TXT = """<b>◎ Nᴀᴍᴇ: kuttu boT
+◎ Cʀᴇᴀᴛᴏʀ: <a href=https://t.me/wudixh1>Goutham S E R💥</a>
 ◎ Lᴀɴɢᴜᴀɢᴇ: Pʏᴛʜᴏɴ 3
 ◎ Dᴀᴛᴀ Bᴀsᴇ: Mᴏɴɢᴏ DB
 ◎ Bᴏᴛ Sᴇʀᴠᴇʀ: Koyeb</b>"""
@@ -47,7 +47,7 @@ Example: </code/batch https://t.me/teamEvaMaria/2</code> </code>https://t.me/tea
 - Filter is the feature were users can set automated replies for a particular keyword and EvaMaria will respond whenever a keyword is found the message
 
 <b>NOTE:</b>
-1. TechMagazine-AutoFilterBot should have admin privillage.
+1. kuttu boT should have admin privillage.
 2. only admins can add filters in a chat.
 3. alert buttons have a limit of 64 characters.
 
@@ -58,7 +58,7 @@ Example: </code/batch https://t.me/teamEvaMaria/2</code> </code>https://t.me/tea
 • /delall - <code>delete the whole filters in a chat (chat owner only)</code>"""
     BUTTON_TXT = """Help: <b>Buttons</b>
 
-- TechMagazine-AutoFilterBot Supports both url and alert inline buttons.
+- kuttu boT Supports both url and alert inline buttons.
 
 <b>NOTE:</b>
 1. Telegram will not allows you to send buttons without any content, so content is mandatory.
