@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://telegra.ph/file/72d3cbd3ef6154fb780cb.jpg" alt="Eva Maria Logo">
+  <img src="https://user-images.githubusercontent.com/97418751/208283132-acd700e7-c144-45cb-bef3-8721350602bb.jpg" alt="kuttu boT Logo">
 </p>
 <h1 align="center">
-  <b>TechMagazine AutoFilter Bot</b>
+  <b>kuttu  AutoFilter Bot</b>
 </h1>
 
 
@@ -45,9 +45,9 @@ Read [this](https://telegram.dog/TeamEvamaria/12) before you start messing up wi
 ## Deploy
 You can deploy this bot anywhere.
 
-<i>**[Watch Deploying Tutorial...](https://youtu.be/gNCd8xuNgM8)**</i>
+<i>**[Watch Deploying Tutorial...](https://youtu.be/)**</i>
 
-<a target="_blank" href="https://app.koyeb.com/deploy?type=git&repository=github.com/itsyogieu/TechMagazine-AutoFilterBot/deploy-buttons&branch=master&name=tmafbot"><img alt="Deploy to Koyeb" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg"></a>
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/GouthamSER/Filter-bot&branch=master&name=telebot)
 
 
 
