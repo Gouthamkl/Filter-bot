@@ -8,7 +8,7 @@ from utils import get_size, temp, get_settings
 from Script import script
 from pyrogram.errors import ChatAdminRequired
 
-"""-----------------------------------------https://t.me/GetTGLink/4179 --------------------------------------"""
+
 
 @Client.on_message(filters.new_chat_members & filters.group)
 async def save_group(bot, message):
@@ -22,7 +22,7 @@ async def save_group(bot, message):
         if message.chat.id in temp.BANNED_CHATS:
             # Inspired from a boat of a banana tree
             buttons = [[
-                InlineKeyboardButton('Support', url=f'https://t.me/{SUPPORT_CHAT}')
+                InlineKeyboardButton('🌐 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 🌐', url=f'https://t.me/wudixh')
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             k = await message.reply(
@@ -37,8 +37,8 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            InlineKeyboardButton('📢 Updates', url='https://t.me/TeamEvamaria')
+            InlineKeyboardButton('🌐 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 🌐', url=f"https://t.me/wudixh"),
+            InlineKeyboardButton('📢 𝖴𝗉𝖽𝖺𝗍𝖾𝗌', url='https://t.me/wudixh1')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -53,7 +53,7 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>")
+                temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title}</b> \n\n𝗥𝗲𝗾𝘂𝗲𝘀𝘁𝘀 𝗙𝗼𝗿𝗺𝗮𝘁𝘀\n\n• 𝖲𝗈𝗅𝗈 2017\n• 𝖣𝗁𝗈𝗈𝗆 3 𝖧𝗂𝗇𝖽𝗂\n• 𝖪𝗎𝗋𝗎𝗉 𝖪𝖺𝗇𝗇𝖺𝖽𝖺\n• 𝖣𝖺𝗋𝗄 𝗌01\n• 𝖲𝗁𝖾 𝖧𝗎𝗅𝗄 720𝗉\n• 𝖥𝗋𝗂𝖾𝗇𝖽𝗌 𝗌03 1080𝗉\n\n‼️𝗗𝗼𝗻𝘁 𝗮𝗱𝗱 𝘄𝗼𝗿𝗱𝘀 & 𝘀𝘆𝗺𝗯𝗼𝗹𝘀 𝗹𝗶𝗸𝗲 , . -  send link movie series 𝗲𝘁𝗰‼️")
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
@@ -67,12 +67,12 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-            InlineKeyboardButton('Support', url=f'https://t.me/{SUPPORT_CHAT}')
+            InlineKeyboardButton('🌐 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 🌐', url=f'https://t.me/wudixh')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat,
-            text='<b>Hello Friends, \nMy admin has told me to leave from group so i go! If you wanna add me again contact my support group.</b>',
+            text='<b>𝖧𝖾𝗅𝗅𝗈 𝖥𝗋𝗂𝖾𝗇𝖽𝗌, \n𝖬𝗒 𝖺𝖽𝗆𝗂𝗇 𝗁𝖺𝗌 𝗍𝗈𝗅𝖽 𝗆𝖾 𝗍𝗈 𝗅𝖾𝖺𝗏𝖾 𝖿𝗋𝗈𝗆 𝗀𝗋𝗈𝗎𝗉 𝗌𝗈 𝗂 𝗀𝗈! 𝖨𝖿 𝗒𝗈𝗎 𝗐𝖺𝗇𝗇𝖺 𝖺𝖽𝖽 𝗆𝖾 𝖺𝗀𝖺𝗂𝗇 𝖼𝗈𝗇𝗍𝖺𝖼𝗍 𝗆𝗒 𝗌𝗎𝗉𝗉𝗈𝗋𝗍 𝗀𝗋𝗈𝗎𝗉.</b>',
             reply_markup=reply_markup,
         )
 
@@ -106,12 +106,12 @@ async def disable_chat(bot, message):
     await message.reply('Chat Successfully Disabled')
     try:
         buttons = [[
-            InlineKeyboardButton('Support', url=f'https://t.me/{SUPPORT_CHAT}')
+            InlineKeyboardButton('🌐 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 🌐', url=f'https://t.me/wudixh')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat_, 
-            text=f'<b>Hello Friends, \nMy admin has told me to leave from group so i go! If you wanna add me again contact my support group.</b> \nReason : <code>{reason}</code>',
+            text=f'<b>𝖧𝖾𝗅𝗅𝗈 𝖥𝗋𝗂𝖾𝗇𝖽𝗌, \n𝖬𝗒 𝖺𝖽𝗆𝗂𝗇 𝗁𝖺𝗌 𝗍𝗈𝗅𝖽 𝗆𝖾 𝗍𝗈 𝗅𝖾𝖺𝗏𝖾 𝖿𝗋𝗈𝗆 𝗀𝗋𝗈𝗎𝗉 𝗌𝗈 𝗂 𝗀𝗈! 𝖨𝖿 𝗒𝗈𝗎 𝗐𝖺𝗇𝗇𝖺 𝖺𝖽𝖽 𝗆𝖾 𝖺𝗀𝖺𝗂𝗇 𝖼𝗈𝗇𝗍𝖺𝖼𝗍 𝗆𝗒 𝗌𝗎𝗉𝗉𝗈𝗋𝗍 𝗀𝗋𝗈𝗎𝗉.</b> \nReason : <code>{reason}</code>',
             reply_markup=reply_markup)
         await bot.leave_chat(chat_)
     except Exception as e:
@@ -139,7 +139,7 @@ async def re_enable_chat(bot, message):
 
 @Client.on_message(filters.command('stats') & filters.incoming)
 async def get_ststs(bot, message):
-    rju = await message.reply('Fetching stats..')
+    rju = await message.reply('Fetching stats...')
     total_users = await db.total_users_count()
     totl_chats = await db.total_chat_count()
     files = await Media.count_documents()
